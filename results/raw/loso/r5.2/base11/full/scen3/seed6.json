@@ -1,0 +1,26 @@
+[
+  {
+    "pr_auc": 0.09284166677083845,
+    "roc_auc": 0.9994614918822683,
+    "precision": 0.00892458723784025,
+    "recall": 1.0,
+    "f1": 0.017691287041132243,
+    "fpr": 0.011494728779260839,
+    "mcc": 0.09392551052868664,
+    "balanced_acc": 0.9942526356103696,
+    "n": 193239,
+    "n_pos": 20,
+    "base_rate": 0.00010349877612697229,
+    "task": "loso/r5.2/base11/full/scen3/seed6",
+    "protocol": "loso",
+    "release": "r5.2",
+    "method": "base11",
+    "variant": "full",
+    "seed": 6,
+    "scenario": 3,
+    "target": "r5.2",
+    "forward_rate": null,
+    "infer_ms_per_1k": 7.984883186055113,
+    "train_time_s": 33.90460906099179
+  }
+]

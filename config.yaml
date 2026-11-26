@@ -1,0 +1,132 @@
+# ITD-EdgeCloud: single configuration file for every stage.
+# All paths are relative to the project root.
+
+paths:
+  raw: data/raw              # downloaded archives / extracted datasets
+  work: data/work            # intermediate checkpoints (block aggregates)
+  features: data/features    # final feature tables (parquet)
+  models: artifacts/models   # trained models + training checkpoints
+  results: results           # raw per-run results, tables, figures
+  logs: logs
+
+seeds: [5, 6, 7, 8, 9]
+device: cuda                 # falls back to cpu automatically
+
+cert:
+  releases: [r4.2, r5.2, r6.2]
+  block_mb: 256              # CSV block size; each block is one resume checkpoint
+  warmup_days: 14            # first days of each release are history only (no labels evaluated)
+  workday: [7, 19]           # 07:00-19:00 on weekdays = working hours
+  domain: dtaa.com           # internal e-mail domain in CERT
+  url_keywords:
+    job: [job, career, hiring, resume, monster, indeed, linkedin, simplyhired, careerbuilder, craigslist]
+    leak: [wikileaks, dropbox, box.com, mega., drive, upload, pastebin, 4shared, rapidshare, mediafire]
+    hack: [hack, keylog, spyware, malware, exploit, crack, sniff]
+  # CERT organisational roles -> clinical roles (smart-hospital mapping, Phase I)
+  role_map:
+    it_admin: [itadmin, it admin, administrator - it]
+    clinical_lead: [president, director, manager, chief, vice, lead]
+    biomedical_engineer: [engineer, technician, mechanic, electrical, software, scientist, hardware, tester]
+    nurse: [salesman, assistant, secretary, administrative, clerk, accountant, attorney, coordinator, receptionist, sales]
+    # anything else -> "staff"
+
+split:
+  chrono80: {test_frac: 0.20, val_frac_time: 0.10}      # protocol of base paper [11]
+  chrono70: {test_frac: 0.30, val_frac_users: 0.15}     # protocol of base paper [13]
+  userdisj70: {test_frac: 0.30, val_frac_users: 0.15}   # protocol of base paper [13]
+  loso: {test_normal_frac: 0.30, val_frac_users: 0.15}  # zero-day: leave one insider scenario out
+
+models:
+  oof_folds: 3               # out-of-fold anomaly scores for training rows (prevents stacking leakage)
+  iforest: {n_estimators: 200, max_samples: 256, max_train: 200000}
+  ae: {hidden: [64, 16], lr: 0.001, batch: 2048, epochs: 60, patience: 6, max_train: 300000}
+  fog_lgbm:
+    num_leaves: 31
+    learning_rate: 0.05
+    n_estimators: 600        # capped for fog (lightweight)
+    min_child_samples: 50
+    feature_fraction: 0.8
+    bagging_fraction: 0.8
+    bagging_freq: 1
+    reg_lambda: 1.0
+    early_stopping: 50
+  gru: {window: 14, hidden: 64, dropout: 0.2, lr: 0.001, weight_decay: 0.0001,
+        batch: 1024, epochs: 60, patience: 8, neg_ratio: 30, clip: 8.0, fixed_epochs: 15,
+        min_epoch_samples: 32768}
+  two_tier: {forward_recall: 0.95, min_recall_under_load: 0.90, blend_grid: [0.0, 0.25, 0.5, 0.75, 1.0],
+             default_blend: 0.5}
+  min_val_pos_select: 20          # fewer positive validation days -> no model selection on validation
+  graph: {max_neighbors: 20, max_users_per_pc: 10}    # PCs used by >10 users are shared/hub machines
+  adaptive_threshold: {min_val_pos: 3}
+  # reproduction of base paper [11] (Alkharabsheh et al., 2026)
+  base11: {lstm_window: 7, lstm_hidden: 32, pca_var: 0.95, weight_step: 0.1}
+  # reproduction of base paper [13] (Alriyami & Mohamad, 2026)
+  base13_rf: {n_estimators: 300, class_weight: balanced_subsample}
+
+experiments:
+  chrono80: [r4.2]                 # vs [11]
+  chrono70: [r4.2, r5.2]           # vs [13]
+  userdisj70: [r4.2, r5.2, r6.2]   # vs [13]; also trains the cross-dataset sources
+  cross_targets: [r4.2, r5.2]      # r6.2 is source only (44 positive user-days, as in [13])
+  loso: [r4.2, r5.2]
+  ablation_protocol: chrono80
+  ablation_release: r4.2
+  ablations: [full, no_graph, cloud_only_no_graph, no_context, fixed_threshold, cloud_only, fog_only, fog_no_anomaly,
+              if_only, ae_only, drop_logon, drop_device, drop_file, drop_email, drop_http]
+
+iot:
+  ton_iot:
+    file: data/raw/ton_iot/train_test_network.csv
+    sample_n: 50000                # same size as base paper [15]
+    cv_folds: 5
+    holdout: [0.70, 0.15, 0.15]
+    drop: [ts, src_ip, dst_ip, dns_query, ssl_subject, ssl_issuer, http_uri, http_user_agent, type]
+  ciciomt2024:
+    dir: data/raw/ciciomt2024
+    drop: [IAT]                    # IAT encodes capture time in CIC IoT feature sets -> leakage
+    max_per_class: 200000          # train rows per class (speed); test set is used in full
+    val_frac: 0.15
+  fog_lgbm: {num_leaves: 15, n_estimators: 300, learning_rate: 0.1}
+  cloud_lgbm: {num_leaves: 63, n_estimators: 2000, learning_rate: 0.05, early_stopping: 100}
+  xgb_base15: {n_estimators: 300, max_depth: 6, learning_rate: 0.1}
+
+blockchain:
+  rpc: http://127.0.0.1:8545
+  n_devices: 50
+  n_alerts: 500
+  batch_size: 50
+  n_tamper: 100
+
+bench:
+  n_fog_nodes: 3
+  cpus: 1.0                       # per fog container
+  mem: 512m
+  n_events: 10000
+  batch: 50
+  rate_eps: 2000                  # event arrival rate per fog node
+  port: 8600                      # cloud service (host) port reached by the containers
+  idle_s: 5                       # idle power measurement before the runs (RAPL)
+  watts_per_core: 2.0             # used only if RAPL is not readable (then marked "estimated")
+  adapt: {load_ref: 0.7, rtt_ref_ms: 50, backlog_ref: 4}
+  repeats: 3                      # every condition is run 3 times (random order); tables report mean +/- std
+  require_docker: true            # stop (instead of silently falling back) if Docker is not usable
+  modes: [adaptive, static, cloud_only]
+  scenarios:
+    - {name: normal,          rtt_ms: 5,   mbit: 100, stress: 0}
+    - {name: congested_link,  rtt_ms: 150, mbit: 2,   stress: 0}
+    - {name: overloaded_fog,  rtt_ms: 5,   mbit: 100, stress: 1}
+    - {name: degraded,        rtt_ms: 150, mbit: 2,   stress: 1}
+
+# Numbers reported by the 2026 base papers (used only for comparison tables).
+base_reported:
+  b11_chrono80_r4.2: {roc_auc: 0.976, precision: 0.89, recall: 0.86, f1: 0.87}
+  b13_indist:
+    r4.2: {chrono70: 0.6660, userdisj70: 0.5497}
+    r5.2: {chrono70: 0.8150, userdisj70: 0.6254}
+  b13_cross:     # PR-AUC, Random Forest, rows = source, cols = target
+    r4.2: {r5.2: 0.250}
+    r5.2: {r4.2: 0.390}
+    r6.2: {r4.2: 0.015, r5.2: 0.135}
+  b15_toniot_cv: {accuracy: 1.000, f1_macro: 1.000, mcc: 1.000}
+  b15_system: {block_ms: 10.11, batch50_fog_s: 3.67, batch50_cloud_s: 7.68,
+               cpu_pct: "38-56", mem_mb: "100-145", energy_mwh_per_block: 0.014}

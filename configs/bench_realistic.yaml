@@ -1,0 +1,7 @@
+paths: {results: results/bench_realistic}
+bench:
+  n_events: 6000
+  rate_eps: 20
+  scenarios:
+    - {name: normal,         rtt_ms: 5,   mbit: 100, stress: 0}
+    - {name: congested_link, rtt_ms: 150, mbit: 2,   stress: 0}

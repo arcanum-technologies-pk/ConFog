@@ -1,0 +1,11 @@
+Variant,chrono80 r4.2,userdisj70 r4.2,userdisj70 r5.2,loso r4.2,loso r5.2
+ConFog (full),0.994,0.975,0.900,0.331,0.251
+Fog tier only,0.994,0.980,0.896,0.416,0.283
+Without graph branch,0.994,0.977,0.898,0.391,0.230
+Fixed alert threshold,0.993,0.976,0.904,0.351,0.253
+Without context features,0.989,0.970,0.895,--,--
+Without days of history,0.990,0.974,0.890,--,--
+Without web keyword features,0.991,0.974,0.887,--,--
+RF (re-run),0.998,0.960,0.876,0.503,0.353
+RF (re-run) with context features,0.997,0.966,0.886,--,--
+"Deep sequence baseline (GRU + graph, all records)",0.973,0.906,0.766,0.108,0.041

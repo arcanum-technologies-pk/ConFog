@@ -1,0 +1,31 @@
+[
+  {
+    "pr_auc": 0.3457778425525417,
+    "roc_auc": 0.9822810284832217,
+    "precision": 0.37037037037037035,
+    "recall": 0.23529411764705882,
+    "f1": 0.28776978417266186,
+    "fpr": 0.00016917190353220982,
+    "mcc": 0.2949699672692063,
+    "balanced_acc": 0.6175624728717634,
+    "n": 201064,
+    "n_pos": 85,
+    "base_rate": 0.00042275096486690805,
+    "task": "loso/r5.2/ours/full/scen1/seed8",
+    "protocol": "loso",
+    "release": "r5.2",
+    "method": "ours",
+    "variant": "full",
+    "seed": 8,
+    "scenario": 1,
+    "target": "r5.2",
+    "forward_rate": 0.002954283213305216,
+    "infer_ms_per_1k": 16.64189943007264,
+    "train_time_s": 54.75811310199788,
+    "fog_train_pr_auc": 1.0,
+    "fog_val_pr_auc": 0.9037627530747633,
+    "cloud_train_pr_auc_subsample": 0.9989661375060347,
+    "cloud_val_pr_auc": 0.8638343499032922,
+    "final_val_pr_auc": 0.9253505444032621
+  }
+]

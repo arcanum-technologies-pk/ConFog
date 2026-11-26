@@ -1,0 +1,78 @@
+{
+  "operations": {
+    "deploy_AccessPolicy": {
+      "n": 1,
+      "gas_mean": 213357.0,
+      "latency_ms_mean": 15.894951007794589,
+      "latency_ms_p95": 15.894951007794589
+    },
+    "deploy_DeviceRegistry": {
+      "n": 1,
+      "gas_mean": 469073.0,
+      "latency_ms_mean": 9.99353600491304,
+      "latency_ms_p95": 9.99353600491304
+    },
+    "deploy_AlertAnchor": {
+      "n": 1,
+      "gas_mean": 394875.0,
+      "latency_ms_mean": 7.966901001054794,
+      "latency_ms_p95": 7.966901001054794
+    },
+    "set_writer": {
+      "n": 3,
+      "gas_mean": 45616.0,
+      "latency_ms_mean": 8.688445993660329,
+      "latency_ms_p95": 9.189716289984062
+    },
+    "register_device": {
+      "n": 50,
+      "gas_mean": 74246.08,
+      "latency_ms_mean": 7.567997159494553,
+      "latency_ms_p95": 9.608870451484107
+    },
+    "anchor_alert": {
+      "n": 250,
+      "gas_mean": 83443.752,
+      "latency_ms_mean": 6.287519920209888,
+      "latency_ms_p95": 8.604775350977425
+    },
+    "anchor_batch": {
+      "n": 5,
+      "gas_mean": 83691.0,
+      "latency_ms_mean": 5.88855680252891,
+      "latency_ms_p95": 6.278278797981329
+    },
+    "revoke_device": {
+      "n": 1,
+      "gas_mean": 33771.0,
+      "latency_ms_mean": 7.908829007647,
+      "latency_ms_p95": 7.908829007647
+    }
+  },
+  "n_alerts": 500,
+  "n_real_alerts": 161,
+  "verified_untampered": 500,
+  "tampered": 100,
+  "tamper_detected": 100,
+  "tamper_detection_rate": 1.0,
+  "security_tests": {
+    "unregistered_device_rejected": true,
+    "revoked_device_rejected": true,
+    "unauthorised_writer_rejected": true,
+    "replay_rejected": true,
+    "tampered_fog_model_rejected": true,
+    "firmware_mismatch_detected": true,
+    "firmware_match_accepted": true
+  },
+  "gas_per_alert_single": 83443.752,
+  "gas_per_alert_batched": 1673.82,
+  "on_chain_bytes_per_alert": 32,
+  "node": "Hardhat 2.22.17 (local, automine)",
+  "fog_firmware_sha256": "ba71f82380fcc964e2d409c1441ba173304350108c5e8af24809c09751833b7c",
+  "fog_firmware_files": [
+    "./artifacts/models/fog_main/fog_lgbm.txt",
+    "./artifacts/models/fog_main/fog_bundle.pkl",
+    "./src/fog_runtime.py",
+    "./src/fog_node.py"
+  ]
+}

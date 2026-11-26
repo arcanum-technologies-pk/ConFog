@@ -1,0 +1,32 @@
+[
+  {
+    "pr_auc": 0.991494386241961,
+    "roc_auc": 0.9999722230535745,
+    "precision": 0.9872611464968153,
+    "recall": 0.9567901234567902,
+    "f1": 0.9717868338557993,
+    "fpr": 3.168919240093166e-05,
+    "mcc": 0.9718355421475203,
+    "balanced_acc": 0.9783792171321946,
+    "n": 63275,
+    "n_pos": 162,
+    "base_rate": 0.0025602528644804424,
+    "task": "chrono80/r4.2/ours/no_tenure/seed9",
+    "protocol": "chrono80",
+    "release": "r4.2",
+    "method": "ours",
+    "variant": "no_tenure",
+    "seed": 9,
+    "target": "r4.2",
+    "forward_rate": 0.0024812327143421574,
+    "infer_ms_per_1k": 12.789486795750536,
+    "train_time_s": 25.214676727999176,
+    "fog_train_pr_auc": 1.0,
+    "fog_val_pr_auc": 0.9903162437299817,
+    "cloud_train_pr_auc_subsample": 0.9999697107912572,
+    "cloud_val_pr_auc": 0.9959305804823695,
+    "blend_w": 0.0,
+    "tau_fwd": 0.3896300356724868,
+    "final_val_pr_auc": 0.9903162437299817
+  }
+]

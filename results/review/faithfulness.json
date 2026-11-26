@@ -1,0 +1,29 @@
+{
+  "n_alerts": 161,
+  "n_malicious_alerts": 158,
+  "baseline": "median of normal test days",
+  "top1": {
+    "mean_drop_reasons": 0.9725130155675761,
+    "mean_drop_random": 0.0251682955510217,
+    "share_reasons_larger": 1.0,
+    "share_no_longer_forwarded_reasons": 0.9937888198757764,
+    "share_no_longer_forwarded_random": 0.0,
+    "wilcoxon_p": 1.7950370377072402e-28
+  },
+  "top3": {
+    "mean_drop_reasons": 0.9888874226838039,
+    "mean_drop_random": 0.0633597534301777,
+    "share_reasons_larger": 1.0,
+    "share_no_longer_forwarded_reasons": 1.0,
+    "share_no_longer_forwarded_random": 0.006211180124223602,
+    "wilcoxon_p": 1.7950370377072402e-28
+  },
+  "top5": {
+    "mean_drop_reasons": 0.9889751022854768,
+    "mean_drop_random": 0.10516660058081985,
+    "share_reasons_larger": 1.0,
+    "share_no_longer_forwarded_reasons": 1.0,
+    "share_no_longer_forwarded_random": 0.012422360248447204,
+    "wilcoxon_p": 1.7950370377072402e-28
+  }
+}

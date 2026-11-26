@@ -1,0 +1,9 @@
+Operation,Calls,Gas (mean),Latency mean (ms),Latency p95 (ms)
+deploy_AccessPolicy,1,"213,311",902.51,902.51
+deploy_DeviceRegistry,1,"468,941",953.44,953.44
+deploy_AlertAnchor,1,"394,759",1055.68,1055.68
+set_writer,3,"45,620",987.68,1042.60
+register_device,50,"74,246",999.48,1056.36
+anchor_alert,250,"83,444",999.85,1065.60
+anchor_batch,5,"83,691",1010.24,1068.34
+revoke_device,1,"33,771",523.52,523.52

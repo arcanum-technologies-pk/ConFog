@@ -1,0 +1,18 @@
+Variant,PR-AUC,F1,Forwarded
+ConFog (full),0.994 ± 0.004,0.945 ± 0.008,0.0026 ± 0.0001
+Fog tier only,0.994 ± 0.004,0.960 ± 0.015,0.0000 ± 0.0000
+Without graph branch,0.994 ± 0.004,0.946 ± 0.022,0.0026 ± 0.0001
+Fixed alert threshold,0.993 ± 0.005,0.959 ± 0.014,0.0026 ± 0.0001
+Without context features,0.989 ± 0.001,0.927 ± 0.017,0.0027 ± 0.0001
+Without days of history,0.990 ± 0.002,0.940 ± 0.028,0.0025 ± 0.0000
+Without web keyword features,0.991 ± 0.004,0.925 ± 0.023,0.0025 ± 0.0000
+Without IF and AE scores,0.991 ± 0.004,0.925 ± 0.008,0.0025 ± 0.0001
+Cloud tier only (deep baseline),0.973 ± 0.005,0.907 ± 0.012,1.0000 ± 0.0000
+"Cloud tier only, without graph",0.973 ± 0.003,0.916 ± 0.009,1.0000 ± 0.0000
+Without logon logs,0.990 ± 0.004,0.919 ± 0.018,0.0026 ± 0.0001
+Without file logs,0.987 ± 0.007,0.935 ± 0.022,0.0026 ± 0.0002
+Without e-mail logs,0.976 ± 0.005,0.934 ± 0.034,0.0026 ± 0.0001
+Without removable-device logs,0.949 ± 0.025,0.860 ± 0.018,0.0051 ± 0.0040
+Without web logs,0.516 ± 0.083,0.557 ± 0.025,0.6155 ± 0.3930
+Autoencoder only,0.120 ± 0.017,0.267 ± 0.032,0.0000 ± 0.0000
+Isolation forest only,0.007 ± 0.000,0.019 ± 0.001,0.0000 ± 0.0000

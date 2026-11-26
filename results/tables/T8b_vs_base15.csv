@@ -1,0 +1,9 @@
+metric,proposed,[15] Alamri 2026 (reported)
+fog decision latency p95 (ms),11.34,-
+"fog batch of 50 (s, [15])",-,3.67
+fog CPU (% of 1 core),15.9623,38-56
+fog memory peak (MB),140.7826,100-145
+uplink vs cloud-only (%),0.271,-
+"total energy per 1k events (mWh), fog-cloud",3.0692,-
+"total energy per 1k events (mWh), cloud-only",2.1955,-
+"energy per block (mWh, [15])",-,0.014

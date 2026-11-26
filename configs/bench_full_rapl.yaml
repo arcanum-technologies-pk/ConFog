@@ -1,0 +1,2 @@
+paths: {results: results/bench_full_rapl}
+bench: {n_events: 100000, idle_each_run: true, idle_s: 30}

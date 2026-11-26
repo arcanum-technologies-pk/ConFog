@@ -1,0 +1,9 @@
+paths: {results: results/bench_stress_lenient}
+bench:
+  n_events: 30000
+  rate_eps: 20000
+  modes: [adaptive, static]
+  adapt: {load_ref: 0.9, rtt_ref_ms: 100, backlog_ref: 8}
+  scenarios:
+    - {name: saturated,          rtt_ms: 5,   mbit: 100, stress: 2}
+    - {name: saturated_degraded, rtt_ms: 150, mbit: 2,   stress: 2}

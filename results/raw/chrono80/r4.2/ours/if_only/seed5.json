@@ -1,0 +1,26 @@
+[
+  {
+    "pr_auc": 0.007186707209659869,
+    "roc_auc": 0.8353404133248751,
+    "precision": 0.009508615188257817,
+    "recall": 0.9197530864197531,
+    "f1": 0.01882263769580596,
+    "fpr": 0.24592397762743015,
+    "mcc": 0.07888708429528811,
+    "balanced_acc": 0.8369145543961615,
+    "n": 63275,
+    "n_pos": 162,
+    "base_rate": 0.0025602528644804424,
+    "task": "chrono80/r4.2/ours/if_only/seed5",
+    "protocol": "chrono80",
+    "release": "r4.2",
+    "method": "ours",
+    "variant": "if_only",
+    "seed": 5,
+    "target": "r4.2",
+    "forward_rate": 0.0,
+    "infer_ms_per_1k": 9.93585863295267,
+    "train_time_s": 27.55850208699121,
+    "final_val_pr_auc": 0.007970684629988454
+  }
+]

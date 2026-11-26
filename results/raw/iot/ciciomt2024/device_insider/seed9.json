@@ -1,0 +1,44 @@
+[
+  {
+    "accuracy": 0.9541357141626019,
+    "f1_macro": 0.9504206091737013,
+    "mcc": 0.9019751451441044,
+    "n": 58019,
+    "roc_auc": 0.9946553148361765,
+    "pr_auc": 0.9915763255072993,
+    "model": "fog_lgbm",
+    "train_time_s": 1.1809446309925988,
+    "infer_ms_per_1k": 1.4909426909435506,
+    "dataset": "ciciomt2024",
+    "protocol": "device_insider",
+    "seed": 9
+  },
+  {
+    "accuracy": 0.9569968458608387,
+    "f1_macro": 0.9534992552842583,
+    "mcc": 0.908085615180248,
+    "n": 58019,
+    "roc_auc": 0.9951007484185656,
+    "pr_auc": 0.992033032083391,
+    "model": "cloud_lgbm",
+    "train_time_s": 6.0237530970189255,
+    "infer_ms_per_1k": 9.171717127190648,
+    "dataset": "ciciomt2024",
+    "protocol": "device_insider",
+    "seed": 9
+  },
+  {
+    "accuracy": 0.9542736000275772,
+    "f1_macro": 0.9504381714150967,
+    "mcc": 0.901612070426774,
+    "n": 58019,
+    "roc_auc": 0.9941715133639115,
+    "pr_auc": 0.9907352615643504,
+    "model": "xgb_base15",
+    "train_time_s": 1.2285730270086788,
+    "infer_ms_per_1k": 0.5160338854522731,
+    "dataset": "ciciomt2024",
+    "protocol": "device_insider",
+    "seed": 9
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "accuracy": 0.9986924781171684,
+    "f1_macro": 0.9981465251675833,
+    "mcc": 0.9962932407310864,
+    "n": 27533,
+    "roc_auc": 0.9999883425441201,
+    "pr_auc": 0.9999965402520766,
+    "model": "fog_lgbm",
+    "train_time_s": 0.5731471970211715,
+    "infer_ms_per_1k": 1.7321356191418145,
+    "dataset": "ton_iot",
+    "protocol": "holdout",
+    "seed": 5
+  },
+  {
+    "accuracy": 0.9987287981694694,
+    "f1_macro": 0.9981975068299715,
+    "mcc": 0.9963950189520234,
+    "n": 27533,
+    "roc_auc": 0.9999875830885542,
+    "pr_auc": 0.9999963131610045,
+    "model": "cloud_lgbm",
+    "train_time_s": 0.8786370879970491,
+    "infer_ms_per_1k": 1.2403391565641395,
+    "dataset": "ton_iot",
+    "protocol": "holdout",
+    "seed": 5
+  },
+  {
+    "accuracy": 0.9986924781171684,
+    "f1_macro": 0.9981450732008789,
+    "mcc": 0.9962904854129702,
+    "n": 27533,
+    "roc_auc": 0.9999870929965387,
+    "pr_auc": 0.9999961682019217,
+    "model": "xgb_base15",
+    "train_time_s": 0.677229686989449,
+    "infer_ms_per_1k": 0.6191333675447139,
+    "dataset": "ton_iot",
+    "protocol": "holdout",
+    "seed": 5
+  }
+]

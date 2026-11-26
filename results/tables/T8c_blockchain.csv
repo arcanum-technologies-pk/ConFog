@@ -1,0 +1,9 @@
+operation,n,gas (mean),latency ms (mean),latency ms (p95)
+deploy_AccessPolicy,1,213357,15.89,15.89
+deploy_DeviceRegistry,1,469073,9.99,9.99
+deploy_AlertAnchor,1,394875,7.97,7.97
+set_writer,3,45616,8.69,9.19
+register_device,50,74246,7.57,9.61
+anchor_alert,250,83444,6.29,8.6
+anchor_batch,5,83691,5.89,6.28
+revoke_device,1,33771,7.91,7.91

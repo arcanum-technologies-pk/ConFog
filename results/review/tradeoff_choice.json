@@ -1,0 +1,56 @@
+{
+  "chrono80": {
+    "rule": "fastest configuration within 0.005 of the best validation PR-AUC",
+    "chosen": {
+      "protocol": "chrono80",
+      "anomaly_scores": false,
+      "num_leaves": 7,
+      "max_trees": 600,
+      "val": 0.9932605868430846,
+      "test": 0.9834046711814116,
+      "test_sd": 0.01202036686327313,
+      "ms": 0.015727036733308827,
+      "kb": 542.9876302083334,
+      "trees": 598.0
+    },
+    "paper_default": {
+      "protocol": "chrono80",
+      "anomaly_scores": true,
+      "num_leaves": 31,
+      "max_trees": 600,
+      "val": 0.9940361940940946,
+      "test": 0.9956066505426882,
+      "test_sd": 0.0023425139521521805,
+      "ms": 0.10155562026672366,
+      "kb": 2146.2750651041665,
+      "trees": 598.3333333333334
+    }
+  },
+  "userdisj70": {
+    "rule": "fastest configuration within 0.005 of the best validation PR-AUC",
+    "chosen": {
+      "protocol": "userdisj70",
+      "anomaly_scores": false,
+      "num_leaves": 7,
+      "max_trees": 600,
+      "val": 0.9848147548951017,
+      "test": 0.9704634921452687,
+      "test_sd": 0.007985922982524709,
+      "ms": 0.010573114533326588,
+      "kb": 389.3014322916667,
+      "trees": 428.3333333333333
+    },
+    "paper_default": {
+      "protocol": "userdisj70",
+      "anomaly_scores": true,
+      "num_leaves": 31,
+      "max_trees": 600,
+      "val": 0.9802642681147035,
+      "test": 0.9765919569462961,
+      "test_sd": 0.006475393201987484,
+      "ms": 0.09309792966663129,
+      "kb": 1752.6510416666667,
+      "trees": 495.6666666666667
+    }
+  }
+}

@@ -1,0 +1,5 @@
+Protocol,Release,RF (reported),RF (re-run),RF (re-run) + context,ConFog
+Chronological 70/30,r4.2,0.666,0.997 ± 0.000,0.997 ± 0.000,0.991 ± 0.001
+Chronological 70/30,r5.2,0.815,0.957 ± 0.008,0.964 ± 0.007,0.956 ± 0.016
+User-disjoint 70/30,r4.2,0.550,0.960 ± 0.026,0.966 ± 0.020,0.975 ± 0.008
+User-disjoint 70/30,r5.2,0.625,0.876 ± 0.012,0.886 ± 0.026,0.900 ± 0.015

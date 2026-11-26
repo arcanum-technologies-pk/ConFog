@@ -1,0 +1,6 @@
+chrono80    r4.2  ConFog - base13_rf: dPR-AUC = -0.0085  95% CI [-0.0232, +0.0010]  (seeds=5)
+chrono80    r4.2  ConFog - base11   : dPR-AUC = +0.8663  95% CI [+0.8159, +0.9217]  (seeds=5)
+chrono70    r4.2  ConFog - base13_rf: dPR-AUC = -0.0080  95% CI [-0.0211, +0.0001]  (seeds=5)
+chrono70    r5.2  ConFog - base13_rf: dPR-AUC = -0.0187  95% CI [-0.0703, +0.0213]  (seeds=5)
+userdisj70  r4.2  ConFog - base13_rf: dPR-AUC = -0.0032  95% CI [-0.0489, +0.0317]  (seeds=5)
+userdisj70  r5.2  ConFog - base13_rf: dPR-AUC = +0.0062  95% CI [-0.0681, +0.0635]  (seeds=5)

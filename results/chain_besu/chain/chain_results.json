@@ -1,0 +1,80 @@
+{
+  "operations": {
+    "deploy_AccessPolicy": {
+      "n": 1,
+      "gas_mean": 213311.0,
+      "latency_ms_mean": 902.5094710004851,
+      "latency_ms_p95": 902.5094710004851
+    },
+    "deploy_DeviceRegistry": {
+      "n": 1,
+      "gas_mean": 468941.0,
+      "latency_ms_mean": 953.4371280005871,
+      "latency_ms_p95": 953.4371280005871
+    },
+    "deploy_AlertAnchor": {
+      "n": 1,
+      "gas_mean": 394759.0,
+      "latency_ms_mean": 1055.682660000457,
+      "latency_ms_p95": 1055.682660000457
+    },
+    "set_writer": {
+      "n": 3,
+      "gas_mean": 45620.0,
+      "latency_ms_mean": 987.6751993333528,
+      "latency_ms_p95": 1042.5970954004697
+    },
+    "register_device": {
+      "n": 50,
+      "gas_mean": 74246.08,
+      "latency_ms_mean": 999.484207139958,
+      "latency_ms_p95": 1056.3588717002403
+    },
+    "anchor_alert": {
+      "n": 250,
+      "gas_mean": 83443.656,
+      "latency_ms_mean": 999.8473423039795,
+      "latency_ms_p95": 1065.604072999895
+    },
+    "anchor_batch": {
+      "n": 5,
+      "gas_mean": 83691.0,
+      "latency_ms_mean": 1010.2402614002131,
+      "latency_ms_p95": 1068.3384730004036
+    },
+    "revoke_device": {
+      "n": 1,
+      "gas_mean": 33771.0,
+      "latency_ms_mean": 523.5178010007075,
+      "latency_ms_p95": 523.5178010007075
+    }
+  },
+  "n_alerts": 500,
+  "n_real_alerts": 161,
+  "verified_untampered": 500,
+  "tampered": 100,
+  "tamper_detected": 100,
+  "tamper_detection_rate": 1.0,
+  "security_tests": {
+    "unregistered_device_rejected": true,
+    "revoked_device_rejected": true,
+    "unauthorised_writer_rejected": true,
+    "replay_rejected": true,
+    "tampered_fog_model_rejected": true,
+    "firmware_mismatch_detected": true,
+    "firmware_match_accepted": true,
+    "non_member_account_rejected": true,
+    "member_account_accepted": true
+  },
+  "gas_per_alert_single": 83443.656,
+  "gas_per_alert_batched": 1673.82,
+  "on_chain_bytes_per_alert": 32,
+  "node": "Hyperledger Besu (hyperledger/besu:24.9.1), QBFT, 4 validators, 1 s blocks, node and account permissioning",
+  "fog_firmware_sha256": "ba71f82380fcc964e2d409c1441ba173304350108c5e8af24809c09751833b7c",
+  "fog_firmware_files": [
+    "./artifacts/models/fog_main/fog_lgbm.txt",
+    "./artifacts/models/fog_main/fog_bundle.pkl",
+    "./src/fog_runtime.py",
+    "./src/fog_node.py"
+  ]
+}

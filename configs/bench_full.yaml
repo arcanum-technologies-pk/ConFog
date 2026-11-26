@@ -1,0 +1,2 @@
+paths: {results: results/bench_full}
+bench: {n_events: 100000}

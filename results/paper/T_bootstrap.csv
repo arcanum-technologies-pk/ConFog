@@ -1,0 +1,7 @@
+Protocol,Release,Comparison,dPR-AUC,95% CI,Seeds
+chrono80,r4.2,ConFog - RF (re-run),-0.0043,"[-0.0151, +0.0014]",5
+chrono80,r4.2,ConFog - HybridXAI (re-run),+0.8706,"[+0.8259, +0.9207]",5
+chrono70,r4.2,ConFog - RF (re-run),-0.0067,"[-0.0145, -0.0004]",5
+chrono70,r5.2,ConFog - RF (re-run),-0.0010,"[-0.0490, +0.0244]",5
+userdisj70,r4.2,ConFog - RF (re-run),+0.0154,"[-0.0125, +0.0547]",5
+userdisj70,r5.2,ConFog - RF (re-run),+0.0242,"[-0.0216, +0.0581]",5

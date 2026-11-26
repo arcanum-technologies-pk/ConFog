@@ -1,0 +1,16 @@
+dataset,protocol,model,f1_macro,mcc
+ciciomt2024,binary,cloud_lgbm,0.978 ± 0.005,0.957 ± 0.009
+ciciomt2024,binary,fog_lgbm,0.976 ± 0.002,0.953 ± 0.005
+ciciomt2024,binary,xgb_base15,0.969 ± 0.002,0.939 ± 0.004
+ciciomt2024,category,cloud_lgbm,0.782 ± 0.007,0.521 ± 0.001
+ciciomt2024,category,fog_lgbm,0.713 ± 0.031,0.505 ± 0.011
+ciciomt2024,category,xgb_base15,0.778 ± 0.004,0.546 ± 0.001
+ciciomt2024,device_insider,cloud_lgbm,0.954 ± 0.002,0.909 ± 0.003
+ciciomt2024,device_insider,fog_lgbm,0.950 ± 0.003,0.901 ± 0.006
+ciciomt2024,device_insider,xgb_base15,0.950 ± 0.002,0.901 ± 0.004
+ton_iot,cv5,cloud_lgbm,0.997 ± 0.001,0.993 ± 0.002
+ton_iot,cv5,fog_lgbm,0.997 ± 0.001,0.994 ± 0.001
+ton_iot,cv5,xgb_base15,0.997 ± 0.001,0.993 ± 0.002
+ton_iot,holdout,cloud_lgbm,0.998 ± 0.000,0.996 ± 0.001
+ton_iot,holdout,fog_lgbm,0.998 ± 0.000,0.996 ± 0.000
+ton_iot,holdout,xgb_base15,0.998 ± 0.000,0.996 ± 0.001

@@ -1,0 +1,5 @@
+Protocol,Configuration,Leaves,Anomaly scores,Size (KB),Latency (ms/record),Validation PR-AUC,Test PR-AUC
+chrono80,chosen on validation,7,False,543,0.016,0.993,0.983 ± 0.012
+chrono80,paper default,31,True,2146,0.102,0.994,0.996 ± 0.002
+userdisj70,chosen on validation,7,False,389,0.011,0.985,0.970 ± 0.008
+userdisj70,paper default,31,True,1753,0.093,0.980,0.977 ± 0.006

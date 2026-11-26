@@ -1,0 +1,38 @@
+[
+  {
+    "accuracy": 0.678083498280495,
+    "f1_macro": 0.7022575060092126,
+    "mcc": 0.5062973059374279,
+    "n": 723464,
+    "model": "fog_lgbm",
+    "train_time_s": 22.555950552021386,
+    "infer_ms_per_1k": 8.647784445382845,
+    "dataset": "ciciomt2024",
+    "protocol": "category",
+    "seed": 7
+  },
+  {
+    "accuracy": 0.691572766578572,
+    "f1_macro": 0.774712773386952,
+    "mcc": 0.522382214654291,
+    "n": 723464,
+    "model": "cloud_lgbm",
+    "train_time_s": 119.2550561040116,
+    "infer_ms_per_1k": 69.77669642166539,
+    "dataset": "ciciomt2024",
+    "protocol": "category",
+    "seed": 7
+  },
+  {
+    "accuracy": 0.7059978105337653,
+    "f1_macro": 0.7780552137199858,
+    "mcc": 0.5466224548919686,
+    "n": 723464,
+    "model": "xgb_base15",
+    "train_time_s": 47.83830118100741,
+    "infer_ms_per_1k": 2.784537292812514,
+    "dataset": "ciciomt2024",
+    "protocol": "category",
+    "seed": 7
+  }
+]

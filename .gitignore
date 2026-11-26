@@ -1,0 +1,15 @@
+data/
+logs/
+artifacts/
+.venv/
+__pycache__/
+*.pyc
+*.log
+*.out
+*.tmp
+.env
+blockchain/node_modules/
+blockchain/besu/
+blockchain/build/
+blockchain/artifacts/
+blockchain/cache/
